@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Item to Menu</title>
+    <link rel="stylesheet" type="text/css" href='/static/styles.css'>
+ <style>
+ </style>
+</head>
+<body>
+    <header>
+    <h1>Add Item to Menu</h1>
+    </header>
+    <form method="post">
+      <div class="container">
+        {% csrf_token %}
+        <label for="name">Item Name:</label>
+        <input type="text" name="name"><br>
+        <label for="price">Price:</label>
+        <input type="text" name="price"><br>
+        <button type="submit">Add Item</button>
+      </div>
+    </form>
+    <div class="fab-container">
+    <a href="{% url 'zomotoApp:show_menu' %}" class="fab">View Menu</a>
+    <a href="{% url 'zomotoApp:order_item' %}" class="fab">Order Item</a>
+    <a href="{% url 'zomotoApp:view_all_orders' %}" class="fab">View All Orders</a>
+</div>
+</body>
+</html>

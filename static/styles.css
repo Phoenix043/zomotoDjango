@@ -1,0 +1,208 @@
+/* Reset default browser styles */
+body, h1, ul, li, form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Forms and inputs */
+form {
+    margin: 20px 0;
+}
+
+label, input, select {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* List styles */
+ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+/* Individual order item */
+.order-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Update status form */
+.status-form {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.status-form label {
+    margin-right: 10px;
+    color: #555;
+}
+
+/* Floating action buttons */
+.fab-container {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+form {
+    margin: 20px 0;
+}
+
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.menu-list {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.menu-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-list li:last-child {
+    border-bottom: none;
+}
+
+
+
+.fab {
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.fab:hover {
+    background-color: #0056b3;
+}
+
+form {
+    margin: 20px 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+.order-list {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.order-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-item a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.order-item a:hover {
+    color: #0056b3;
+}
+
+
+/* Add Item to Menu Page */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+form {
+    margin: 20px 0;
+}
+
+form label, form input {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+form input[type="text"], form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Order Status</title>
+    <link rel="stylesheet" type="text/css" href='/static/styles.css'>
+</head>
+<body>
+    <header>
+        <h1>Update Order Status</h1>
+    </header>
+    <div class="container">
+        <form method="post" class="status-form">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="status">New Status:</label>
+                <select name="status">
+                    <option value="Pending">Pending</option>
+                    <option value="Processing">Processing</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Cancelled">Cancelled</option>
+                </select>
+            </div>
+            <button type="submit">Update Status</button>
+        </form>
+        <div class="fab-container">
+            <a href="{% url 'zomotoApp:show_menu' %}" class="fab">View Menu</a>
+            <a href="{% url 'zomotoApp:add_item_to_menu' %}" class="fab" >Add Item to Menu</a>
+            <a href="{% url 'zomotoApp:view_all_orders' %}" class="fab">View All Orders</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+    <link rel="stylesheet" type="text/css" href='/static/styles.css'>
+</head>
+<body>
+    <header>
+        <h1>Menu</h1>
+    </header>
+    <div class="container">
+        <ul class="menu-list">
+            {% for item in menu_items %}
+                <li>
+                    <span class="item-name">{{ item.name }}</span>
+                    <span class="item-price">${{ item.price }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="fab-container">
+            <a href="{% url 'zomotoApp:add_item_to_menu' %}" class="fab" >Add Item to Menu</a>
+            <a href="{% url 'zomotoApp:order_item' %}" class="fab">Order Item</a>
+            <a href="{% url 'zomotoApp:view_all_orders' %}" class="fab">View All Orders</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Item</title>
+    <link rel="stylesheet" type="text/css" href='/static/styles.css'>
+</head>
+<body>
+    <header>
+        <h1>Order Item</h1>
+    </header>
+    <div class="container">
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="item_id">Select Item:</label>
+                <select name="item_id">
+                    {% for item in menu_items %}
+                        <option value="{{ item.id }}">{{ item.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" name="quantity">
+            </div>
+            <button type="submit">Place Order</button>
+        </form>
+        <ul class="order-list">
+            {% for order in orders %}
+                <li class="order-item">
+                    Order ID: {{ order.id }}<br>
+                    Item ID: {{ order.item_id }}<br>
+                    Quantity: {{ order.quantity }}<br>
+                    Status: {{ order.status }}
+                    <a href="{% url 'zomotoApp:update_order_status' order.id %}">Update Status</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="fab-container">
+            <a href="{% url 'zomotoApp:show_menu' %}" class="fab">View Menu</a>
+            <a href="{% url 'zomotoApp:add_item_to_menu' %}" class="fab" >Add Item to Menu</a>
+            <a href="{% url 'zomotoApp:view_all_orders' %}" class="fab">View All Orders</a>
+        </div>
+    </div>
+</body>
+</html>
