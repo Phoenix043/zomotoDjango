@@ -1,19 +1,32 @@
 {
     "builds": [
-        {
-            "src": "zomotoApp/wsgi.py",
-            "use": "@vercel/python",
-            "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+      {
+        "src": "zomotoApp/wsgi.py",
+        "use": "@vercel/python",
+        "config": {
+          "maxLambdaSize": "15mb",
+          "runtime": "python3.9"
         }
+      },
+      {
+        "src": "manage.py",
+        "use": "@vercel/python",
+        "config": {
+          "maxLambdaSize": "15mb",
+          "runtime": "python3.9",
+          "command": "python manage.py collectstatic --noinput"
+        }
+      }
     ],
     "routes": [
-        {
-            "src": "^/static/(.*)",  
-            "dest": "/static/$1"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "zomotoApp/wsgi.py"
-        }
+      {
+        "src": "^/static/(.*)",
+        "dest": "/static/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "zomotoApp/wsgi.py"
+      }
     ]
-}
+  }
+  
