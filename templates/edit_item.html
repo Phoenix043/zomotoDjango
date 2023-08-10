@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Item</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <div class="edit-container">
+        <header>
+        <h1>Edit Item</h1>
+        </header>
+        <form method="post" class="edit-form">
+        <div class="container">
+            {% csrf_token %}
+            <label for="name">Item Name:</label>
+            <input type="text" name="name" value="{{ item.name }}"><br>
+            <label for="price">Item Price:</label>
+            <input type="text" name="price" value="{{ item.price }}"><br>
+            <label for="availability">Availability:</label>
+            <input type="checkbox" name="availability" {% if item.availability %}checked{% endif %}><br>
+            <label for="quantity">Quantity:</label>
+            <input type="number" name="quantity" value="{{ item.quantity }}"><br>
+            <input type="submit" value="Save" class="edit-button">
+        </div>
+        </form>
+        {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+<div class="fab-container">
+        <a href="{% url 'zomotoApp:show_menu' %}" class="fab">View Menu</a>
+    </div>
+</body>
+</html>

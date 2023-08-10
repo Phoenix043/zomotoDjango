@@ -17,7 +17,6 @@ label, input, select {
 
 /* List styles */
 ul {
-    list-style: none;
     margin: 20px 0;
 }
 
@@ -77,7 +76,6 @@ header {
 
 
 .menu-list {
-    list-style: none;
     margin: 20px 0;
     padding: 0;
 }
@@ -170,7 +168,7 @@ form {
 form label, form input {
     display: block;
     margin-bottom: 10px;
-    color: #555;
+    color: #555555;
 }
 
 form input[type="text"], form input[type="number"] {
@@ -205,4 +203,6 @@ a:hover {
     text-decoration: underline;
     color: #0056b3;
 }
-
+.item-desc {
+    color: #37f407;
+}
